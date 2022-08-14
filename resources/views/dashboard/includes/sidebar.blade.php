@@ -10,7 +10,12 @@
                     <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button"
                         aria-haspopup="true" aria-expanded="false">
                         @if(!auth()->user()->avatar)
-                        <img src="{{ asset('dashboard/img/avatars/default.png') }}"  alt="{{ auth()->user()->email }}">
+                        <img src="{{ asset('dashboard/img/avatars/default.png') }}"  style="
+                        width: 100px;
+    height: 100px;
+    border: 2px solid #eee;
+    border-radius: 5px;
+                    " alt="{{ auth()->user()->email }}">
                         @else 
                         <img src="{{ asset(auth()->user()->avatar) }}"  alt="{{ auth()->user()->email }}" style="
                         width: 100px;
